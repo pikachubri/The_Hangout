@@ -1,0 +1,126 @@
+[
+{
+    "id":1,
+    "title":"Blinding Lights",
+    "artist":"The Weeknd",
+    "genre":"Pop",
+    "category":"pop",
+    "audio":"audio/blinding_lights.mp3"
+    
+    
+
+
+},
+{
+    "id":2,
+    "title":"Shape of You",
+    "artist":"Ed Sheeran",
+    "genre":"Pop",
+    "category":"pop",
+    "audio":"audio/shape_of_you.mp3"
+},
+{
+    "id":3,
+    "title":"Bohemian Rhapsody",
+    "artist":"Queen",
+    "genre":"Rock",
+    "category":"rock",
+    "audio":"audio/bohemian_rhapsody.mp3"
+},
+{
+    "id":4,
+    "title":"Smells Like Teen Spirit",
+    "artist":"Nirvana",
+    "genre":"Rock",
+    "category":"rock",
+    "audio":"audio/smells_like_teen_spirit.mp3"
+},
+{
+    "id":5,
+    "title":"Billie Jean",
+    "artist":"Michael Jackson",
+    "genre":"Pop",
+    "category":"pop",
+    "audio":"audio/billie_jean.mp3"
+},
+
+{
+    "id":6,
+    "title":"Lose Yourself",
+    "artist":"Eminem",
+    "genre":"Rap",
+    "category":"rap",
+    "audio":"audio/lose_yourself.mp3"
+},
+{
+    "id":7,
+    "title":"Sicko Mode",
+    "artist":"Travis Scott",
+    "genre":"Rap",
+    "category":"rap",
+    "audio":"audio/sicko_mode.mp3"
+},
+
+{
+    "id":8,
+    "title":"Waterfalls",
+    "artist":"TLC",
+    "genre":"R&B",
+    "category":"r&b",
+    "audio":"audio/waterfalls.mp3"
+},
+{
+    "id":9,
+    "title":"No Scrubs",
+    "artist":"TLC",
+    "genre":"R&B",
+    "category":"r&b",
+    "audio":"audio/no_scrubs.mp3"
+},
+
+{
+    "id":10,
+    "title":"Eye of the Tiger",
+    "artist":"Survivor",
+    "genre":"Rock",
+    "category":"workout",
+    "audio":"audio/eye_of_the_tiger.mp3"
+},
+{
+    "id":11,
+    "title":"Stronger",
+    "artist":"Kanye West",
+    "genre":"Rap",
+    "category":"workout",
+    "audio":"audio/stronger.mp3"
+},
+{
+    "id":12,
+    "title":"Can't Hold Us",
+    "artist":"Macklemore & Ryan Lewis",
+    "genre":"Rap",
+    "category":"workout",
+    "audio":"audio/cant_hold_us.mp3"
+},
+
+{
+    "id":13,
+    "title":"Sunflower",
+    "artist":"Post Malone & Swae Lee",
+    "genre":"Chill",
+    "category":"chill",
+    "audio":"audio/sunflower.mp3"
+},
+{
+    "id":14,
+    "title":"Circles",
+    "artist":"Post Malone",
+    "genre":"Chill",
+    "category":"chill",
+    "audio":"audio/circles.mp3"
+}
+
+
+
+
+]

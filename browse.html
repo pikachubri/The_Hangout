@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hangout | Browse</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel = "stylesheet" href="style.css">
+</head>
+
+<body class = "dark-page">
+      <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-success" href="index.html">The Hangout</a>
+        
+        <div>
+            <a class ="nav-link d-inline text-light me-3"
+            href="index.html">Home</a>
+
+             <a class ="nav-link d-inline text-light me-3 active-page"
+            href="browse.html">Browse</a>
+
+             <a class ="nav-link d-inline text-light me-3"
+            href="playlist.html">Playlist</a>
+
+             <a class ="nav-link d-inline text-light me-3"
+            href="about.html">About</a>
+
+            <a href="login.html" id="authLink" class="btn btn-outline-light">Login</a>
+
+             <a class ="btn btn-success ms-2"
+            href="register.html">Register</a>   
+        </div>
+      </div>
+    </nav>
+
+      <!-- Main Content -->
+       <main class = "container my-5 text-light">
+
+       <section class = "text-center mb-5">
+       <h1 class ="fw-bold">Browse Music</h1>
+       <p class ="lead">Pick a category or search for a song, artist, or genre.</p>
+       </section>
+
+        <!-- Search Bar -->
+         <section class = "row justify-content-center mb-4">
+            <div class ="col-md-7">
+                <input type="text"
+                id="searchInput"
+                class ="form-control form-control-lg"
+                placeholder="Search for songs, artists, or genres...">
+            </div>
+         </section>
+
+          <!-- Categories -->
+           <section class ="text-center mb-5">
+
+         <button class ="btn btn-success m-1 category-btn"
+           data-category="all">All</button>
+
+           <button class ="btn btn-outline-light m-1 category-btn"
+           data-category="pop">Pop</button>
+           
+
+           <button class ="btn btn-outline-light m-1 category-btn"
+           data-category="rap">Rap</button>
+
+           <button class ="btn btn-outline-light m-1 category-btn"
+           data-category="r&b">R&B</button>
+
+            <button class ="btn btn-outline-light m-1 category-btn"
+           data-category="chill">Chill</button>
+
+            <button class ="btn btn-outline-light m-1 category-btn"
+           data-category="workout">Workout</button>
+        </section>
+
+          <!-- Song Cards-->
+           <section>
+<h2 class = "text-center mb-4">Song Results</h2>
+
+<div id = "songList" class = "row g-4 justify-content-center">
+
+
+    </div>
+
+
+           </section>
+        </main>
+
+<audio id="audioPlayer" controls></audio>
+         <!-- Footer -->
+
+   <footer class ="bg-dark text-light text-center py-3 ">
+    <p class = "mb-0">&copy; 2026 The Hangout. All rights reserved.</p>
+
+      <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src ="script.js"></script>
+
+<script>
+const authLink = document.getElementById("authLink");
+
+// Check login state
+if (localStorage.getItem("isLoggedIn") === "true") {
+    authLink.textContent = "Logout";
+    authLink.href = "#";
+
+    authLink.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        // Clear session
+        localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("loggedInUser");
+
+        // Redirect to home/login
+        window.location.href = "index.html";
+    });
+}
+</script>
+
+
+
+  
+   
+</body>
+</html>

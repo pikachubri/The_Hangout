@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hangout | Playlist</title>
+     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel = "stylesheet" href="style.css">
+</head>
+
+<body class = "dark-page">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-success" href="index.html">The Hangout</a>
+        
+        <div>
+            <a class ="nav-link d-inline text-light me-3"
+            href="index.html">Home</a>
+
+             <a class ="nav-link d-inline text-light me-3"
+            href="browse.html">Browse</a>
+
+             <a class ="nav-link d-inline text-light me-3 active-page"
+            href="playlist.html">Playlist</a>
+
+             <a class ="nav-link d-inline text-light me-3"
+            href="about.html">About</a>
+
+           <a href="login.html" id="authLink" class="btn btn-outline-light">Login</a>
+
+             <a class ="btn btn-success ms-2"
+            href="register.html">Register</a>   
+        </div>
+      </div>
+    </nav>
+
+    <!-- Playlist content-->
+    <main class = "container my-5 text-light">
+        <section class = "text-center mb-5">
+            <h1 class ="fw-bold">Your Playlist</h1>
+            <p class ="lead">Your favorite songs, all in one place. Create and manage your personalized playlist.</p>
+        </section>
+       <button class="btn btn-success mb-4" id="playAllButton">
+         Play All
+         </button>
+<h3 id="currentSong" class="text-center mb-4"></h3>
+
+<div class="text-center mb-4">
+
+    <button class="btn btn-outline-light me-2" id="previousButton">
+        Previous
+    </button>
+
+    <button class="btn btn-success" id="nextButton">
+        Next
+    </button>
+
+</div>
+
+<div id ="playlistList" class ="row g-4 justify-content-center"></div>
+
+        
+        
+    </main>
+    <audio id="audioPlayer" controls class="w-100 mt-3">
+        </audio>
+        <div class="mt-4 text-light">
+    <h3>Up Next</h3>
+
+    <div id="queueList">
+        <p>No songs queued.</p>
+    </div>
+</div>
+
+        <!-- Footer -->
+
+   <footer class ="bg-dark text-light text-center py-3 ">
+    <p class = "mb-0">&copy; 2026 The Hangout. All rights reserved.</p>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src ="script.js"></script>
+
+    <script>
+const authLink = document.getElementById("authLink");
+
+// Check login state
+if (localStorage.getItem("isLoggedIn") === "true") {
+    authLink.textContent = "Logout";
+    authLink.href = "#";
+
+    authLink.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        // Clear session
+        localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("loggedInUser");
+
+        // Redirect to home/login
+        window.location.href = "index.html";
+    });
+}
+</script>
+    
+</body>
+</html>

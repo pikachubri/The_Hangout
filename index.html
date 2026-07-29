@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Hangout | Home</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel = "stylesheet" href="style.css">
+  </head>
+  
+  <body>
+      <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-success" href="index.html">The Hangout</a>
+        
+        <div>
+            <a class ="nav-link d-inline text-light me-3 active-page"
+            href="index.html">Home</a>
+
+             <a class ="nav-link d-inline text-light me-3"
+            href="browse.html">Browse</a>
+
+             <a class ="nav-link d-inline text-light me-3"
+            href="playlist.html">Playlist</a>
+
+             <a class ="nav-link d-inline text-light me-3"
+            href="about.html">About</a>
+
+            
+            <a href="login.html" id="authLink" class="btn btn-outline-light">Login</a>
+
+             <a class ="btn btn-success ms-2"
+            href="register.html">Register</a>   
+        </div>
+      </div>
+    </nav>
+    <!-- bg image -->
+   <header class ="home-bg-img text-center text-light">
+    <div class = "container">
+    
+     <!-- Big and bold -->
+      <header class="home-bg-img text-center text-light">
+    <div class="container">
+    <h1 class = "display-4 fw-bold">The Hangout</h1>
+     <p class = "lead">Your virtual escape through music.</p>
+   
+     <!-- Stations Section -->
+    
+   <section class="container text-center text-light my-5">
+
+    <h2 class="mb-4">Choose Your Station</h2>
+
+    <button class="btn btn-outline-light station-btn" data-category="all">
+     All
+    </button>
+    <button class="btn btn-outline-light station-btn" data-category="chill">
+        Chill
+    </button>
+
+    <button class="btn btn-outline-light station-btn" data-category="pop">
+        Pop
+    </button>
+
+    <button class="btn btn-outline-light station-btn" data-category="rock">
+        Rock
+    </button>
+
+    <button class="btn btn-outline-light station-btn" data-category="rap">
+        Rap
+    </button>
+
+    <button class="btn btn-outline-light station-btn" data-category="r&b">
+        R&B
+    </button>
+
+    <button class="btn btn-outline-light station-btn" data-category="workout">
+        Workout
+    </button>
+    <button class="btn btn-outline-light station-btn" data-category="liked">
+     Liked Songs
+</button>
+
+
+    <div class="card bg-dark text-light mt-5 p-4">
+
+        <h3>Now Playing</h3>
+
+        <p id="currentSong">
+            Select a station to start listening 
+        </p>
+       <button class="btn btn-success me-2" id="addCurrentToPlaylist">
+         Add to Playlist
+      </button>
+
+       <button class="btn btn-danger" id="likeCurrentSong">
+           Like
+       </button>
+
+
+         <!-- previous and next song buttons -->
+        <button id="previousButton" class="btn btn-outline-light me-2">
+            Previous Song
+        </button>
+
+        <button id="nextButton" class="btn btn-success">
+            Next Song
+        </button>
+
+        <audio id="audioPlayer" controls class="w-100 mt-3">
+        </audio>
+
+    </div>
+
+</section>
+
+     </div>
+   </header>
+
+  
+   
+
+       <!-- Footer -->
+
+   <footer class ="bg-dark text-light text-center py-3 ">
+    <p class = "mb-0">&copy; 2026 The Hangout. All rights reserved.</p>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src ="script.js"></script>
+
+    <script>
+const authLink = document.getElementById("authLink");
+
+// Check login state
+if (localStorage.getItem("isLoggedIn") === "true") {
+    authLink.textContent = "Logout";
+    authLink.href = "#";
+
+    authLink.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        // Clear session
+        localStorage.removeItem("isLoggedIn");
+        localStorage.removeItem("loggedInUser");
+
+        // Redirect to home/login
+        window.location.href = "index.html";
+    });
+}
+</script>
+  </body>
+</html>
